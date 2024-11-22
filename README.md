@@ -6,7 +6,7 @@
 <a>In oltre per la geolocalizzazione delle città/indirizzi ho utilizzata un API gratuita <a href='https://opencagedata.com'>OpenCage Geocoding API</a>, quest' ultima necessita di un token rilasciato durante la registrazione per effettuare le richieste HTTP</a>
 <a>OiLSearch è stato sviluppato usando la libreria per lo sviluppo di interfacce grafica <b>Java Swing</b></a>
 <hr>
-<h4>Funzionalità</h4>
+<h2>Funzionalità</h2>
 <ul>
   <li>Ricerca distibutori</li>
   <li>Autocompletamento in base a una lista con tutti i comuni italiani</li>
