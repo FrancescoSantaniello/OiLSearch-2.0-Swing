@@ -11,6 +11,18 @@ public class Benzinaio {
     private String insertDate;
     private String address;
     private String brand;
+    private String distance;
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Benzinaio benzinaio)) return false;
+        return id == benzinaio.id && Objects.equals(name, benzinaio.name) && Objects.equals(fuels, benzinaio.fuels) && Objects.equals(location, benzinaio.location) && Objects.equals(insertDate, benzinaio.insertDate) && Objects.equals(address, benzinaio.address) && Objects.equals(brand, benzinaio.brand) && Objects.equals(distance, benzinaio.distance);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, fuels, location, insertDate, address, brand, distance);
+    }
 
     public int getId() {
         return id;
@@ -68,9 +80,11 @@ public class Benzinaio {
         this.brand = brand;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (!(o instanceof Benzinaio benzinaio)) return false;
-        return Objects.equals(name, benzinaio.name) && Objects.equals(fuels, benzinaio.fuels) && Objects.equals(location, benzinaio.location) && Objects.equals(insertDate, benzinaio.insertDate) && Objects.equals(address, benzinaio.address) && Objects.equals(brand, benzinaio.brand);
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }

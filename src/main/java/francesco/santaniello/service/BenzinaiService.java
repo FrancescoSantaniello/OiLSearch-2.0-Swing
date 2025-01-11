@@ -1,6 +1,5 @@
 package francesco.santaniello.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import francesco.santaniello.model.RequestMessage;
 import francesco.santaniello.model.ResponseMessage;
 
@@ -15,6 +14,8 @@ public class BenzinaiService {
     private static class InnerClass{
         private static final BenzinaiService instance = new BenzinaiService();
     }
+
+    private BenzinaiService(){}
 
     public static BenzinaiService getInstance(){
         return InnerClass.instance;

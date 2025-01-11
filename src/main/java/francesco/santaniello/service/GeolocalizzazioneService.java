@@ -1,7 +1,6 @@
 package francesco.santaniello.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import francesco.santaniello.model.Coordinate;
 
 import java.net.URI;
@@ -14,6 +13,8 @@ public class GeolocalizzazioneService {
     private static class InnerClass{
         private static final GeolocalizzazioneService instance = new GeolocalizzazioneService();
     }
+
+    private GeolocalizzazioneService(){}
 
     public static GeolocalizzazioneService getInstance(){
         return InnerClass.instance;

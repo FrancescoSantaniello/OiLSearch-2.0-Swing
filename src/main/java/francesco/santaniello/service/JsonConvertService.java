@@ -2,7 +2,7 @@ package francesco.santaniello.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class JsonConvertService extends  ObjectMapper{
+public class JsonConvertService extends ObjectMapper{
 
     private static class InnerClass{
         private static final JsonConvertService instance = new JsonConvertService();

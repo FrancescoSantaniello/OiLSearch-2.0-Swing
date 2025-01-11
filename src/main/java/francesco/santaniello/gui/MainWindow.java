@@ -78,10 +78,6 @@ public class MainWindow extends JFrame {
         }
     }
 
-    public TreeViewModel getTreeViewModel(){
-        return treeViewModel;
-    }
-
     private void search(boolean filtrer, boolean sortAsc) {
         SwingWorker<Void, Void> worker = new SwingWorker<>() {
             @Override

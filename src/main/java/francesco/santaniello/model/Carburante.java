@@ -1,6 +1,5 @@
 package francesco.santaniello.model;
 
-
 import java.util.Objects;
 
 public class Carburante {
@@ -53,6 +52,11 @@ public class Carburante {
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof Carburante that)) return false;
-        return fuelId == that.fuelId && isSelf == that.isSelf && Float.compare(price, that.price) == 0 && Objects.equals(name, that.name);
+        return id == that.id && fuelId == that.fuelId && isSelf == that.isSelf && Float.compare(price, that.price) == 0 && Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, fuelId, name, isSelf, price);
     }
 }

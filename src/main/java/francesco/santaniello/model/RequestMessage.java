@@ -22,6 +22,4 @@ public class RequestMessage {
     public void setRadius(short radius) {
         this.radius = radius;
     }
-
-
 }

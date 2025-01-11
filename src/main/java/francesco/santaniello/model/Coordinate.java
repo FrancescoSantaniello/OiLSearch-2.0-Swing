@@ -1,5 +1,6 @@
 package francesco.santaniello.model;
 
+import java.util.Objects;
 
 public class Coordinate {
     private float lat;
@@ -25,5 +26,10 @@ public class Coordinate {
     public boolean equals(Object o) {
         if (!(o instanceof Coordinate that)) return false;
         return Float.compare(lat, that.lat) == 0 && Float.compare(lng, that.lng) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(lat, lng);
     }
 }
